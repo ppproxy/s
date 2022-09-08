@@ -1,4 +1,4 @@
-﻿
+
 //init_control();
 
 var isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
@@ -2376,12 +2376,9 @@ function ManageUser(tuserALLid) {
 
     $("#manageUser_ShowInfo").click(function () {
 
-        if ($.cookie('randomVipCode')) {
-            sendJson('ShowUserLoginInfo', tuserid, true);
-        }
-        else {
-            layer.msg('此为VIP特权功能，请先购买VIP激活码哦');
-        }
+        
+        sendJson('ShowUserLoginInfo', tuserid, true);
+        
 
     });
 
